@@ -15,7 +15,7 @@ public class UsersServices {
      * y asigna el objeto creado previamente. Una vez lleno el array, devuelve false si:
      * el arreglo esta lleno, o la condicion no se cumple
      * @param persona Recibe un objeto persona ya creado
-     * @return Devuelve true una vez asignado persona al array. False si no hay condicion
+     * @return Devuelve true una vez asignado persona al array. False si no hay condicion.
      */
         public boolean agregarUsuario(User persona){
             if(persona.getRoles().equals(Roles.ADMINISTRADOR)){
