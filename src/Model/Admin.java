@@ -4,8 +4,8 @@ import Enums.Roles;
 
 public class Admin extends User implements AdminPerms {
 
-    Admin(String name, Integer numId, String username, String password, Roles role) {
-        super(name, numId, username, password, Roles.ADMINISTRADOR);
+    Admin(String name, Integer numId, String username, String password, Roles role, String[]logs) {
+        super(name, numId, username, password, Roles.ADMINISTRADOR, logs);
     }
 
     @Override

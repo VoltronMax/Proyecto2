@@ -3,7 +3,7 @@ import Enums.Roles;
 
 public class Standar extends User{
 
-    Standar(String name, Integer numId, String username, String password, Roles role) {
-        super(name, numId, username, password, role);
+    Standar(String name, Integer numId, String username, String password, Register[]registro) {
+        super(name, numId, username, password, registro);
     }
 }

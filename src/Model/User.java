@@ -4,18 +4,19 @@ import Enums.Roles;
 public abstract class User {
 
     //POJO
+
+    private Register[]registros;
     private String name;
     private Integer numId;
     private String username;
     private String password;
-    private Roles roles;
 
-    User(String name, Integer numId, String username, String password, Roles roles){
+    User(String name, Integer numId, String username, String password, Register[]registros){
         this.name = name;
         this.numId = numId;
         this.username = username;
         this.password = password;
-        this.roles = Roles.ESTANDAR;
+        this.registros = new Register[100];
     }
 
     public String getUsername() {
@@ -50,13 +51,20 @@ public abstract class User {
         this.password = password;
     }
 
-    public Roles getRoles() {
-        return roles;
+
+    public void getLogs(Register[] registros) {
+        for (int i = 0; i < registros.length ; i++) {
+            if (registros[i]==null){
+                System.out.println("No hay usuarios registrados");
+            } else {
+                System.out.println(registros[i]);
+            }
+        }
     }
 
     @Override
     public String toString() {
-        return String.format("""
+        return ("""
                 
                 
                 
