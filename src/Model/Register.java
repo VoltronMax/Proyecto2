@@ -2,16 +2,14 @@ package Model;
 
 public class Register {
 
-    private long time;
     private String description;
+    private User user;
+    private Long time;
 
-    Register(String description, long time){
+    Register(String description, User user){
         this.description = description;
-        this.time = time;
-    }
-
-    public void setTime(Long time){
-        this.time = time;
+        this.time = System.currentTimeMillis();
+        this.user = user;
     }
 
     public Long getTime(){
@@ -26,7 +24,11 @@ public class Register {
         return description;
     }
 
+    public void setUser (User user){
+        this.user = user;
+    }
 
-
-
+    public User getUser(){
+        return user;
+    }
 }

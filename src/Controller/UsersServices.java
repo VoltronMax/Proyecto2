@@ -1,7 +1,5 @@
 package Controller;
 import Enums.Roles;
-import Interface.AdminPerms;
-import Model.Admin;
 import Model.User;
 
 public class UsersServices {
