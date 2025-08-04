@@ -16,7 +16,7 @@ public class UsersServices {
      * @return Devuelve true una vez asignado persona al array. False si no hay condicion.
      */
         public boolean agregarUsuario(User persona){
-            if(persona.getRoles().equals(Roles.ADMINISTRADOR)){
+            if(persona.getRol().equals(Roles.ADMINISTRADOR)){
                 for (int i = 0; i < personas.length; i++) {
                     if (personas[i] == null){
                         personas[i] = persona;
