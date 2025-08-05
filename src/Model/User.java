@@ -4,38 +4,25 @@ import Enums.Roles;
 public abstract class User {
 
     //POJO
-    private Register[]registros = new Register[100];
     private String name;
     private Integer numId;
     private String username;
     private String password;
     protected Roles rol;
+    private Register[]registros;
 
-    User(String name, Integer numId, String username, String password, Roles rol){
+
+    User(String name, Integer numId, String username, String password, Roles rol, Register[] registros){
         this.name = name;
         this.numId = numId;
         this.username = username;
         this.password = password;
-        this.rol = rol;
-    }
-
-    public Boolean mostrarRegistros() {
-        boolean encontrado = false;
-        for(int i=0; i< registros.length; i++){
-            if(registros[i]!=null){
-                System.out.println(registros[i]);
-                encontrado = true;
-            }
-        }
-        return encontrado;
+        this.rol = Roles.ESTANDAR;
+        this.registros = new Register[10];
     }
 
     public Roles getRol(){
         return rol;
-    }
-
-    public void setRol(Roles rol){
-        this.rol = rol;
     }
 
     public String getUsername() {

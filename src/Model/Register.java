@@ -2,9 +2,11 @@ package Model;
 
 public class Register {
 
+    //Bien 👍
+
     private String description;
     private User user;
-    private Long time;
+    private final Long time;
 
     Register(String description, User user){
         this.description = description;
